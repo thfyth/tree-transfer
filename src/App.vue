@@ -32,6 +32,7 @@
       >
         <span slot="title-right" class="my-title-right" @click="handleTitleRight">自定义内容</span>
       </tree-transfer>
+      <div @click="getData">获取数据</div>
     </div>
   </div>
 </template>
@@ -238,6 +239,9 @@ export default {
       console.log(nodeObj);
       console.log(treeObj);
       console.log(checkAll);
+    },
+    getData(){
+      log(this.toData)
     },
     // 自定义节点 仅树形结构支持
     renderContent(h, { node, data, store }) {
